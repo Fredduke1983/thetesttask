@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   HeroWrapper,
   HeroTitle,
@@ -7,7 +8,7 @@ import {
   HeroBackground,
 } from "./hero.styled";
 
-export const Hero = () => {
+export const Hero = ({ scrollToRegistration }) => {
   return (
     <HeroWrapper>
       <HeroBackground>
@@ -21,9 +22,13 @@ export const Hero = () => {
             world of Front-End Development keeps evolving.
           </HeroDescription>
 
-          <BtnHero>Sign Up</BtnHero>
+          <BtnHero onClick={scrollToRegistration}>Sign Up</BtnHero>
         </HeroContainer>
       </HeroBackground>
     </HeroWrapper>
   );
+};
+
+Hero.propTypes = {
+  scrollToRegistration: PropTypes.func,
 };

@@ -5,6 +5,8 @@ const Button = styled.button`
   justify-content: center;
   align-items: center;
 
+  cursor: pointer;
+
   font-family: "Nunito", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -14,6 +16,9 @@ const Button = styled.button`
   border: none;
   border-radius: 50px;
   background-color: #f4e041;
+  &:hover {
+    background-color: #ffe302;
+  }
 `;
 
 export { Button };

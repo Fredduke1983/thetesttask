@@ -60,15 +60,15 @@ const UserItem = styled.li`
   font-size: 16px;
 
   @media screen and (min-width: 768px) {
-    max-width: 344px;
+    width: 340px;
   }
 
   @media screen and (min-width: 1024px) {
-    max-width: 282px;
+    width: 282px;
   }
 
   @media screen and (min-width: 2560px) {
-    max-width: 370px;
+    width: 370px;
   }
 `;
 

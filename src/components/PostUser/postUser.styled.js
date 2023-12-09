@@ -19,6 +19,7 @@ const PostForm = styled.form`
   }
 `;
 const FormInputWrapper = styled.div`
+  position: relative;
   margin-bottom: 50px;
 `;
 
@@ -32,6 +33,10 @@ const FormInput = styled.input`
   color: #7e7e7e;
   font-size: 16px;
   line-height: 26px;
+
+  &.incorrect {
+    border: 2px solid #cb3d40;
+  }
 `;
 
 const PhoneExample = styled.p`
@@ -100,6 +105,7 @@ const InputRadio = styled.input`
 `;
 
 const UploadWrapper = styled.div`
+  position: relative;
   display: flex;
 `;
 
@@ -109,7 +115,6 @@ const FormLabelUpload = styled.label`
   align-items: center;
   width: 25%;
   height: 54px;
-  margin-bottom: 50px;
   border: 1px solid #000;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
@@ -117,26 +122,52 @@ const FormLabelUpload = styled.label`
   input {
     display: none;
   }
+  &.errorImg {
+    border: 2px solid #cb3d40;
+  }
 `;
-const UploadDescription = styled.div`
+const UploadDescription = styled.input`
   display: flex;
   align-items: center;
   padding-left: 16px;
 
+  resize: none;
   height: 54px;
   width: 75%;
-  color: #7e7e7e;
+  color: #000;
+
   border: 1px solid #d0cfcf;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
+  &.errorImg {
+    border: 2px solid #cb3d40;
+  }
 `;
 
 const FormButton = styled(Button)`
-  background-color: #b4b4b4;
+  background-color: #f4e041;
 
   margin: 0 auto;
+  margin-top: 50px;
+
   font-size: 16px;
   color: #fff;
+
+  &.disabled {
+    background-color: #b4b4b4;
+  }
+`;
+
+const ErrorText = styled.p`
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+
+  transform: translateY(16px);
+  color: #cb3d40;
+
+  font-size: 12px;
+  margin-top: 4px;
 `;
 
 export {
@@ -154,4 +185,5 @@ export {
   UploadWrapper,
   UploadDescription,
   FormButton,
+  ErrorText,
 };
